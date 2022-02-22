@@ -42,12 +42,12 @@ let handler  = async (m, { conn, usedPrefix }) => {
   let uptime = clockString(_uptime) 
   let totalreg = Object.keys(global.db.data.users).length
   let old = Math.round(performance.now())
-  await m.reply('*[ ❗ ] Loading...*')
+  await m.reply('*▰▰▰▰▱▱▱▱▱▱ ʟᴏᴀᴅɪɴɢ...*')
   let neww = Math.round(performance.now())
   let str = `
                *ℒ⃝👾 B O T  S T A T I S T I C*
                
-👩🏻‍💻 *Owner:* wa.me/6285712420674
+👩🏻‍💻 *Owner:* wa.me/6283825289775
 🧪 *Mode:* ${global.opts['self'] ? 'Private' : 'Publik'}
 📊 *Versi:* ${package.version}
 💻 *Platform:* Unbuntu Linux
@@ -56,7 +56,7 @@ let handler  = async (m, { conn, usedPrefix }) => {
 🧿 *Server:* ${os.hostname()}
 🔎 *Browser:* ${conn.browserDescription[1]}
 *🏢 Hostname:* ${conn.browserDescription[0]}
-📢 *Report:* wa.me/6285712420674
+📢 *Report:* wa.me/6283825289775
 ⭕ *Prefix:* (# / ! .)
 🍃 *Speed:* ${neww - old} *ms*
 👥 *Total user:* ${totalreg} *user*
@@ -65,31 +65,20 @@ let handler  = async (m, { conn, usedPrefix }) => {
 
 *ℒ⃝📱P H O N E  S T A T I S T I C*
 
+*🔋Baterai:* ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? 'pengisian daya sedang berlangsung' : ''}` : 'tidak diketahui'}
 *🪀 Whatsapp V:* ${conn.user.phone.wa_version}
-*🛑 Ram:* ${format(os.totalmem() - os.freemem())} / ${format(os.totalmem())}
+*🛑 Ram:* ${format(os.totalmem() - os.freemem())} / 98.2 GB
 *📈 MCC:* ${conn.user.phone.mcc}
 *📉 MNC:* ${conn.user.phone.mnc}
 *📊 OS Version:* ${os.platform()} ${conn.user.phone.os_version}
 *📫 Merk Hp:* ${conn.user.phone.device_manufacturer}
 *📮 Versi Hp:* ${conn.user.phone.device_model}
-
-
-*ℒ⃝💻C O N N E C T  W I T H  M E*
-
-⛎ *Api:* http://api-alphabot.herokuapp.com
-♈ *Youtube:* http://youtube.com/c/zeeoneofc
-♉ *Github:* http://zeeoneofc.github.io
-♊ *Insragram:* http://instagram.com/_ppiowy
-♋ *Tiktok:* http://tiktok.com/@zeeoneofc
-♌ *Telegram:* http://t.me/zeeoneofc
-♎ *Ch telegram:* http://t.me/zeeone_ofc
-♏ *Whatsapp:* wa.me/6285712420674
-
-
+ *📊Penyimpanan tersedia* 
+${format(os.totalmem())}
 
 
 `.trim()
-conn.sendButton(m.chat, str, `${botol}`, 'GROUP BOT', '.gcbot', m)
+conn.sendButton(m.chat, str, `${botol}`, 'MENU BOT 📒', '.menu', m)
 
 }
 handler.help = ['info']

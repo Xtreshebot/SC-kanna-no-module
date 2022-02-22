@@ -296,7 +296,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
                                     }, {
                                          "title": "[🎐] Creator",
                                          "description": "Kontak Creator ku ^~^",
-                                         "rowId": ".owner"
+                                         "rowId": ".biodata"
                        }],
                     "title": "✧───────────────[ Stats ]───────────────✧"
                 }, {
